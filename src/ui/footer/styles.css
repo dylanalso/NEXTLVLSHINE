@@ -11,3 +11,92 @@
     width: 100%;
     height: 40%;
 }
+
+/* main footer wrapper */
+.site-footer {
+    background-color: var(--primaryDark2);
+    color: var(--background);
+    /* white text for contrast */
+    font-family: var(--font-body);
+    padding: 60px 5% 20px;
+    border-top: 4px solid var(--accent);
+    /* gold line to anchor the bottom */
+}
+
+/* mobile-first grid layout */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* desktop grid layout */
+@media (min-width: 768px) {
+    .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* creates 3 equal columns */
+    }
+}
+
+/* brand section styles */
+.footer-brand h2 {
+    font-family: var(--font-heading);
+    color: var(--accent);
+    font-size: 2rem;
+    margin: 0 0 10px 0;
+}
+
+.footer-brand p {
+    margin: 0;
+    line-height: 1.5;
+    color: #cccccc;
+    /* slightly muted white */
+}
+
+/* headings for links and contact */
+.footer-links h3,
+.footer-contact h3 {
+    font-family: var(--font-heading);
+    color: var(--accent);
+    font-size: 1.5rem;
+    margin: 0 0 20px 0;
+}
+
+/* remove bullet points from list */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* link styling */
+.footer-links a,
+.footer-contact a {
+    color: var(--background);
+    text-decoration: none;
+    line-height: 2;
+    transition: color 0.3s ease;
+    /* smooth color change on hover */
+}
+
+/* hover effects for links */
+.footer-links a:hover,
+.footer-contact a:hover {
+    color: var(--accent);
+}
+
+.footer-contact p {
+    margin: 0 0 15px 0;
+}
+
+/* bottom copyright section */
+.footer-bottom {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid var(--primaryDark);
+    font-size: 0.9rem;
+    color: #999999;
+}

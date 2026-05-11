@@ -23,18 +23,6 @@ body {
     clear: both;
 }
 
-/* content */
-.main-content {
-    display: flex;
-    align-items: center;
-    flex-flow: column nowrap;
-    border: 2px solid black;
-    justify-content: center;
-    color: black;
-    width: 100%;
-    height: 40%;
-}
-
 * {
     box-sizing: border-box;
 }
@@ -65,7 +53,6 @@ body {
     height: 100%;
     object-fit: cover;
     object-position: center;
-
 }
 
 .img-comp-slider {
@@ -78,4 +65,85 @@ body {
     background-color: var(--accent);
     opacity: 1;
     border-radius: 50%;
+}
+
+/* --- MAIN CONTENT & TRUST HEADER --- */
+.main-content {
+    background-color: var(--background);
+    padding: 60px 5%;
+    /* Generous whitespace to prevent clutter! */
+    font-family: var(--font-body);
+    color: var(--textColor);
+    text-align: center;
+}
+
+.trust-header {
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+}
+
+.trust-header h2 {
+    font-family: var(--font-heading);
+    color: var(--primaryDark2);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.trust-header p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--primaryDark);
+}
+
+/* --- SERVICES GRID --- */
+.services-grid {
+    display: grid;
+    /* Mobile-first: 1 column */
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* The Individual Cards */
+.service-card {
+    background-color: var(--bg-off-white);
+    /* Slightly darker than pure white to stand out */
+    padding: 40px 20px;
+    border-radius: 8px;
+    border-bottom: 4px solid var(--accent);
+    /* Gold accent line anchoring the card */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    /* Very soft shadow for depth */
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    /* Smooth floating effect when moused over */
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-family: var(--font-heading);
+    color: var(--primaryDark2);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* --- DESKTOP LAYOUT --- */
+@media (min-width: 768px) {
+    .services-grid {
+        /* Switches to 3 columns on tablets and desktops */
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
