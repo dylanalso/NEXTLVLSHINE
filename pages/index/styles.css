@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Unna:wght@400;700&family=Inter:wght@400;600&display=swap');
+@import url('../../src/ui/colors/styles.css');
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
 
 /* hero */
 .hero-container {
@@ -6,7 +13,7 @@
     align-items: center;
     flex-flow: column nowrap;
     justify-content: center;
-    background-color: var(--primaryDark2);
+    background-color: var(--background);
     color: var(--accent);
     width: 100%;
     height: 60vh;
@@ -23,8 +30,7 @@
     flex-flow: column nowrap;
     border: 2px solid black;
     justify-content: center;
-    background-color: blue;
-    color: white;
+    color: black;
     width: 100%;
     height: 40%;
 }
@@ -35,12 +41,15 @@
 
 .img-comp-container {
     position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 .img-comp-img {
     position: absolute;
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     top: 0;
     left: 0;
@@ -52,9 +61,11 @@
 
 .img-comp-img img {
     display: block;
-    vertical-align: middle;
-    max-height: 350px;
-    width: auto;
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
 }
 
 .img-comp-slider {
@@ -64,7 +75,7 @@
     /*set the appearance of the slider:*/
     width: 40px;
     height: 40px;
-    background-color: #2196F3;
-    opacity: 0.7;
+    background-color: var(--accent);
+    opacity: 1;
     border-radius: 50%;
 }

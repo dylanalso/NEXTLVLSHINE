@@ -2,7 +2,7 @@ const navTopBarInjection = `
     <header class="site-header">
         <nav class="main-nav">
             <a href="#home">
-                <img src="../../src/img/nxtlvlshine.svg" alt="Company Brand Logo" width="100"></img>    
+                <img src="../../src/img/mobileLogo.svg" alt="Company Brand Logo" width="100"></img>    
             </a>
 
             <div class="nav-actions">
@@ -23,23 +23,30 @@ const navTopBarInjection = `
 
 function loadNavTopbar() {
     let navBox = document.getElementById("topbar-container");
-
     if (navBox !== null) {
         navBox.innerHTML = navTopBarInjection;
 
-        let currentPage = window.location.pathname.split("/").pop(); // get current page name
-
-        if (currentPage === "") {
-            currentPage = "index.html";
-        }
+        // Active link logic
+        let currentPage = window.location.pathname.split("/").pop();
+        if (currentPage === "") currentPage = "index.html";
 
         let navLinks = document.querySelectorAll('.topbar-link-item');
-
         navLinks.forEach(function (link) {
             if (link.getAttribute('href').endsWith(currentPage)) {
-                link.classList.add('active'); // active class for current page
+                link.classList.add('active');
             }
         });
+
+        // --- NEW: Hamburger Menu Logic ---
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileNavLinks = document.getElementById('mobileNavLinks');
+
+        if (menuToggle && mobileNavLinks) {
+            menuToggle.addEventListener('click', () => {
+                // This toggles the class that shows/hides the menu in CSS
+                mobileNavLinks.classList.toggle('show-menu');
+            });
+        }
     }
 }
 

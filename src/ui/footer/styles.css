@@ -1,12 +1,13 @@
+@import url(../colors/styles.css);
+
 /* footer */
 .footer {
     display: flex;
     align-items: center;
     flex-flow: column nowrap;
     justify-content: center;
-    border: 2px solid black;
-    background-color: pink;
-    color: white;
+    border-top: 3px solid var(--accent);
+    color: --textColor;
     width: 100%;
     height: 40%;
 }

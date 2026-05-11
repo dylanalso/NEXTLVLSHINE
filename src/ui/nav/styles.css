@@ -1,166 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Unna:wght@400;700&family=Inter:wght@400;600&display=swap');
+@import url(../colors/styles.css);
 
-:root {
-    /*move colors to ../colors/styles.css*/
-    --primaryDark: #4A4C50;
-    --primaryDark2: #222428;
-    --background: #FFFFFF;
-    --accent: #C9A653;
-    --accent2: #D4AF37;
-    --textColor: #333333;
-
-    --font-heading: 'Unna', serif;
-    --font-body: 'Inter', sans-serif;
+#topbar-container {
+    top: 0;
+    position: sticky;
+    z-index: 9999;
 }
 
-@keyframes zoomInAnimation {
-    0% {
-        transform: scale(0);
-        opacity: 0;
-    }
-
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-@keyframes slideDownAnimation {
-    0% {
-        transform: translateY(-100px);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-body {
-    margin: 0% 2%;
-    font-family: var(--font-body);
+.site-header {
     background-color: var(--background);
-    color: var(--textColor);
+    border-bottom: 3px solid var(--accent);
+    font-family: var(--font-body);
 }
 
-
-@media (max-width: 600px) {
-    body {
-        margin: 0%;
-        background-color: var(--primaryDark2);
-    }
-
-    .site-header {
-        top: 0;
-        z-index: 100;
-        position: sticky;
-        background-color: var(--primaryDark2);
-        border-bottom: 3px solid var(--accent);
-        animation-name: slideDownAnimation;
-        animation-duration: 0.75s;
-        animation-timing-function: ease;
-        animation-iteration-count: 1;
-        animation-direction: normal;
-        animation-fill-mode: none;
-    }
-
-    .main-nav {
-        display: flex;
-        justify-content: space-between;
-        padding: 15px 5%;
-
-    }
-
-    .nav-actions {
-        display: flex;
-        align-items: center;
-        gap: 55px;
-    }
-
-    header nav a img {
-        /* logo */
-    }
-
-    header nav div a {
-        /* money button */
-    }
-
-    header nav div button {
-        /* hamburger */
-    }
-
-
-    /* The Money Button */
-    .btn-quote {
-        background-color: var(--accent);
-        color: var(--primaryDark2);
-        font-family: var(--font-body);
-        font-weight: 600;
-        text-decoration: none;
-        padding: 8px 16px;
-        border-radius: 7.5%;
-        text-transform: uppercase;
-        font-size: 1rem;
-        width: fit-content;
-        text-wrap: nowrap;
-        height: 2.5rem;
-        align-content: center;
-    }
-
-
-    /* hamburger icon */
-    .hamburger-menu {
-        background: transparent;
-        border: 2px solid;
-        color: var(--accent);
-        padding: 2% 4%;
-        border-radius: 7.5%;
-        width: 5rem;
-        font-size: 1.8rem;
-        cursor: pointer;
-    }
-
-    /* Hidden Links Dropdown (Mobile) */
-    .nav-links {
-        display: none;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        background-color: var(--primaryDark2);
-        text-align: center;
-    }
-
-    .nav-links li a {
-        display: block;
-        padding: 15px;
-        color: var(--background);
-        text-decoration: none;
-        font-family: var(--font-body);
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
 }
 
+.main-nav a img {
+    padding-left: 25%;
+}
 
-.nav-topbar-links {
-    margin: 0%;
-    border: 2px solid purple;
-    padding: 0%;
-    width: 100%;
+.nav-actions {
     display: flex;
     align-items: center;
-    flex-flow: row;
-    justify-content: center;
+    gap: 15px;
 }
 
-.nav-topbar-links a {
-    white-space: nowrap;
+.btn-quote {
+    background-color: var(--accent);
+    color: var(--background);
+    padding: 8px 16px;
+    border-radius: 4px;
     text-decoration: none;
-    color: black;
-    padding: 1%;
-    border: 2px solid brown;
-    margin: 2px;
-    display: flex;
-    font-family: var(--font-heading);
+    font-weight: 600;
+}
+
+.hamburger-menu {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--primaryDark);
+    cursor: pointer;
+    padding: 0 25px;
+}
+
+/* Hidden Links Dropdown */
+.nav-links {
+    display: none;
+    /* Hidden by default */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: var(--background);
+    text-align: center;
+}
+
+/* JS will add this class when the button is clicked! */
+.nav-links.show-menu {
+    display: block;
+}
+
+.nav-links li a {
+    display: block;
+    padding: 15px;
+    color: var(--primaryDark);
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-top: 1px solid #eee;
+    /* Light gray separator */
+}
+
+/* Active Page Indicator */
+.topbar-link-item.active {
+    color: var(--accent);
+    font-weight: bold;
 }
