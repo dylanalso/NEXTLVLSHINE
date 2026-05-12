@@ -18,10 +18,10 @@ const footerInjection =
             <div class="footer-links">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/about.html">About Us</a></li>
-                    <li><a href="/booking.html">Booking</a></li>
-                    <li><a href="/contact.html">Contact Us</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
 

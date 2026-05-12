@@ -1,8 +1,8 @@
 const navTopBarInjection = `
     <header class="site-header">
         <nav class="main-nav">
-            <a href="../../pages/index/index.html">
-                <img src="../../src/img/mobileLogo.svg" alt="Company Brand Logo" width="100"></img>    
+            <a href="index.html">
+                <img src="src/img/mobileLogo.svg" alt="Company Brand Logo" width="100"></img>    
             </a>
 
             <div class="nav-actions">
@@ -14,9 +14,9 @@ const navTopBarInjection = `
         </nav>
 
         <ul class="nav-links" id="mobileNavLinks">
-            <li><a href="../../pages/index/index.html">Home</a></li>
-            <li><a href="../../pages/about/about.html">About</a></li>
-            <li><a href="../../pages/contact/contact.html">Request a Quote</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Request a Quote</a></li>
         </ul>
     </header>
 `;
