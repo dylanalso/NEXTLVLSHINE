@@ -6,7 +6,7 @@ const navTopBarInjection = `
             </a>
 
             <div class="nav-actions">
-                <a href="tel:+15551234567" class="btn-quote">Call Now</a>            
+                <a href="tel:${SiteConfig.phoneLink}" class="btn-quote">Call Now</a>            
                 <button class="hamburger-menu" id="menuToggle" aria-label="Open Menu">
                     ☰
                 </button>
@@ -14,12 +14,12 @@ const navTopBarInjection = `
         </nav>
 
         <ul class="nav-links" id="mobileNavLinks">
-            <li><a href="">Services</a></li>
-            <li><a href="#before-after">Our Work</a></li>
+            <li><a href="../../pages/index/index.html">Home</a></li>
             <li><a href="../../pages/about/about.html">About</a></li>
+            <li><a href="../../pages/contact/contact.html">Request a Quote</a></li>
         </ul>
     </header>
-    `;
+`;
 
 function loadNavTopbar() {
     let navBox = document.getElementById("topbar-container");
