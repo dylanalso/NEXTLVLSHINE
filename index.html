@@ -12,67 +12,211 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="src/ui/nav/styles.css">
-    <link rel="stylesheet" href="src/ui/footer/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
-    <div id="topbar-container"></div>
 
-    <div class="hero-container">
-        <div class="img-comp-container">
-            <div class="img-comp-img">
-                <img src="src/img/clean.png">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="img/nxtlvlshine.svg" alt="Next LVL Shine Logo" class="logo-icon" style="height: 75px; width: auto; margin-right: 5px;">
+                <a href="#home"><span class="logo-text">Next <span class="logo-accent"> LVL</span> Shine</span></a>
             </div>
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#benefits">Why Soft Wash?</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <a href="tel:+4092474463" class="btn btn-primary pulse-btn nav-cta">
+                <span class="cta-text">Call: (409) 247-4463</span>
+                <span class="cta-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                        <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+                    </svg>
+                </span>
+            </a>
+        </div>
+    </nav>
 
-            <div class="img-comp-img img-comp-overlay">
-                <img src="src/img/dirty.png">
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-content fade-in-up">
+            <h1>Safe. Powerful. <span class="text-accent">Lasting Clean.</span></h1>
+            <p>Experience the superior results of chemical soft washing. We remove dirt, algae, and grime without the damaging high pressure of traditional methods.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary btn-large">Get a Free Quote</a>
+                <a href="tel:+4092474463" class="btn btn-outline btn-large">Call (409) 247-4463</a>
             </div>
         </div>
-    </div>
-
-    <section class="main-content" id="services">
-        <div class="trust-header">
-            <h2>A Higher Standard of Clean</h2>
-            <p>Professional, <strong>licensed</strong>, and <strong>insured</strong> chemical power
-                washing to safely restore your property's curb appeal without
-                damaging your siding or roof.</p>
+        <div class="hero-graphic fade-in-up delay-1">
+            <div class="glass-card hero-badge">
+                <span class="badge-icon">✨</span>
+                <div>
+                    <strong>100% Safe</strong>
+                    <p>For siding & roofs</p>
+                </div>
+            </div>
+            <div class="glass-card hero-badge badge-right">
+                <span class="badge-icon">🛡️</span>
+                <div>
+                    <strong>Long-Lasting</strong>
+                    <p>Kills mold at the root</p>
+                </div>
+            </div>
         </div>
+    </header>
 
-        <div class="services-grid">
-
-            <div class="service-card">
+    <!-- Services Section -->
+    <section class="services section-padding" id="services">
+        <div class="container text-center section-header fade-in-up">
+            <h2>Our Soft Washing Services</h2>
+            <p>Low pressure, high impact. We protect your property while making it shine.</p>
+        </div>
+        <div class="container grid-3">
+            <div class="service-card slide-in-left">
                 <div class="card-icon">🏠</div>
                 <h3>House Washing</h3>
-                <p>Safe, low-pressure chemical washing to remove algae, mold, and grime from vinyl, brick, and stucco.
-                </p>
+                <p>Gentle removal of algae, mold, and dirt from vinyl, stucco, and brick without damaging the surface.</p>
             </div>
-
-            <div class="service-card">
+            <div class="service-card slide-in-bottom delay-1">
+                <div class="card-icon">🪜</div>
+                <h3>Roof Cleaning</h3>
+                <p>Eliminate black streaks and moss to extend the life of your shingles and boost curb appeal.</p>
+            </div>
+            <div class="service-card slide-in-right delay-2">
                 <div class="card-icon">🚗</div>
-                <h3>Driveway & Concrete</h3>
-                <p>Deep surface cleaning to lift oil stains, dirt, and organic growth from your concrete surfaces.</p>
+                <h3>Concrete & Driveways</h3>
+                <p>Deep chemical treatment coupled with soft washing to restore concrete surfaces to like-new condition.</p>
             </div>
-
-            <div class="service-card">
-                <div class="card-icon">🛖</div>
-                <h3>Roof Soft Washing</h3>
-                <p>Protect your shingles while destroying the black streaks and moss that degrade your roof over time.
-                </p>
-            </div>
-
         </div>
     </section>
 
-    <div id="footer-container"></div>
+    <!-- Benefits Section -->
+    <section class="benefits section-padding bg-light" id="benefits">
+        <div class="container benefits-layout">
+            <div class="benefits-text fade-in-up">
+                <h2>Why Choose <span class="text-accent">Chemical Soft Washing?</span></h2>
+                <ul class="benefits-list">
+                    <li>
+                        <span class="check-icon">✓</span>
+                        <div>
+                            <strong>No Damage to Property</strong>
+                            <p>High pressure can strip paint and damage siding. Our low-pressure method is completely safe.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check-icon">✓</span>
+                        <div>
+                            <strong>Longer Lasting Clean</strong>
+                            <p>Our solutions kill organic growth at the root, so your property stays cleaner, longer.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check-icon">✓</span>
+                        <div>
+                            <strong>Instantly Boosts Curb Appeal</strong>
+                            <p>Watch years of grime disappear before your eyes, instantly raising your property value.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="benefits-image fade-in-up delay-1">
+                <div class="img-comp-container" style="height: 400px; border-radius: var(--border-radius-lg); overflow: hidden; box-shadow: var(--shadow-lg);">
+                    <div class="img-comp-img">
+                        <img src="img/clean.png" alt="Clean House Surface">
+                    </div>
+                    <div class="img-comp-img img-comp-overlay">
+                        <img src="img/dirty.png" alt="Dirty House Surface">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <script src="src/data/config.js"></script>
-    <script src="src/ui/nav/navbar.js"></script>
-    <script src="js/heroComparison.js"></script>
-    <script src="src/ui/footer/footer.js"></script>
-    <script src="js/introAnimation.js"></script>
+    <!-- Lead Generation Form Section -->
+    <section class="contact-section section-padding" id="contact">
+        <div class="container contact-container">
+            <div class="contact-info fade-in-up">
+                <h2>Ready for a cleaner home?</h2>
+                <p>Fill out the form or give us a call. We'll get back to you with a free, no-obligation estimate!</p>
+                <div class="contact-details">
+                    <div class="detail-item">
+                        <span class="detail-icon">📞</span>
+                        <a href="tel:+4092474463">(409) 247-4463</a>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-icon">✉️</span>
+                        <a href="mailto:info@nextlvlshine.com">info@nextlvlshine.com</a>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-icon">📍</span>
+                        <p>Serving the Houston area</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-wrapper glass-form fade-in-up delay-1">
+                <h3>Request a Free Quote</h3>
+                <form id="leadForm" class="lead-form">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="(xxx) xxx-xxxx">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Needed</label>
+                        <select id="service" name="service">
+                            <option value="house">House Washing</option>
+                            <option value="roof">Roof Cleaning</option>
+                            <option value="driveway">Driveway/Concrete</option>
+                            <option value="other">Other / Not Sure</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block btn-submit">Get My Quote</button>
+                    <div id="formSuccess" class="form-success hidden">
+                        Thanks! We will contact you shortly.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content grid-3">
+            <div class="footer-col">
+                <h4>Next LVL Shine</h4>
+                <p>The premium chemical soft washing experts. Delivering safe and lasting results for your home.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>Phone: (409) 247-4463</p>
+                <p>Email: info@nextlvlshine.com</p>
+                <p>Address: Houston, TX</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Next LVL Shine. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="js/app.js"></script>
 </body>
-
 </html>
